@@ -23,10 +23,7 @@
 }
 
 .tool {
-    @include tool-bcg(33px, 33px);
-    width: 392px;
     border: 1px solid transparent;
-    height: 294px;
     transition: transform 0.3s ease-in-out;
     &__header {
         margin-bottom: 30px;
@@ -102,6 +99,25 @@
                     @include button(16px, 24px, 9px, 35px, $orange, rgba(255, 255, 255, 1));
                 }
             }
+        }
+    }
+}
+
+.big {
+    @include tool-bcg(33px, 33px);
+    width: 392px;
+    height: 294px;
+}
+.small {
+    @include tool-bcg(28px, 22px);
+    width: 288px;
+    height: 284px;
+    .tool__description {
+        font-size: 14px;
+    }
+    &:hover {
+        .tool__description {
+            @include text(14px, 400, #fff, 0.78);
         }
     }
 }

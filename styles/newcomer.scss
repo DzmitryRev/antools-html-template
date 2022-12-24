@@ -1,0 +1,26 @@
+.newcomer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 200px;
+    &__banner {
+        margin-top: 20px;
+    }
+    &__title {
+        @include text(48px, 500, #fff, 0.9);
+        margin-bottom: 30px;
+    }
+    &__description {
+        @include text(18px, 500, #fff, 0.55);
+        margin-bottom: 60px;
+        max-width: 440px;
+    }
+    &__button {
+        @include button(18px, 27px, 16px, 40px, $orange, rgba(255, 255, 255, 1));
+    }
+    &__brands {
+        display: grid;
+        grid-template-columns: repeat(2, 288px);
+        grid-row-gap: 50px;
+        grid-column-gap: 25px;
+    }
+}
