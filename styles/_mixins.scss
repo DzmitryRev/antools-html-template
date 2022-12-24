@@ -1,0 +1,14 @@
+@mixin text($fz, $fw, $col, $opa: 1) {
+    font: {
+        size: $fz;
+        weight: $fw;
+    }
+    color: $col;
+    opacity: $opa;
+}
+
+@mixin button($fz, $lh ,$pv, $ph) {
+    font-size: $fz;
+    line-height: $lh;
+    padding: $pv $ph;
+}

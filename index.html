@@ -4,12 +4,53 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>antools.</title>
   </head>
   <body>
-    <div class="test">
-
+    <div class="container">
+      <div class="hero">
+        <header class="header">
+          <div class="header__logo-container">
+            <img class="header__logo-img" src="./assets/logo.svg" alt="logo" />
+            <h1 class="header__logo-title">antools.</h1>
+          </div>
+          <nav class="header__nav">
+            <a href="/#" class="header__nav-item">Home</a>
+            <a href="/#" class="header__nav-item"
+              >Categories
+              <img src="./assets/arrow-down.svg" alt="arrow down" />
+            </a>
+            <a href="/#" class="header__nav-item">My Collections</a>
+            <a href="/#" class="header__nav-item">Blog</a>
+          </nav>
+          <div>
+            <a href="/#" class="header__nav-item">Login</a>
+            <button class="header__sign-up-button button__orange">Sign Up</button>
+          </div>
+        </header>
+        <div class="hero__preview">
+          <h2 class="hero__preview-title title">Awesome tools for Designer & Developer.</h2>
+          <p class="hero__preview-description description">
+            Antool is a web collection of information on paid or free Design and Development tools
+          </p>
+        </div>
+        <div class="hero__social-container">
+          <img class="hero__social-item" src="./assets/sm-facebook.svg" alt="facebook" />
+          <img class="hero__social-item" src="./assets/sm-instagram.svg" alt="instagram" />
+          <img class="hero__social-item" src="./assets/sm-twitter.svg" alt="twitter" />
+        </div>
+        <img class="hero__bcg-img" src="./assets/hero-bcg-img.png" alt="" />
+      </div>
+      <div class="popular">
+        <h2 class="popular__title title">Most Popular Tools</h2>
+        <p class="popular__description description">
+          Tools for the best Designers and Developers most popularly used in the world
+        </p>
+        <div class="popular__grid"></div>
+        <button class="popular__load-more button__ghost">Load more</button>
+      </div>
     </div>
+
     <script type="module" src="/main.js"></script>
   </body>
 </html>

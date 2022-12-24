@@ -1,0 +1,40 @@
+@import "./mixins";
+
+.hero {
+    padding-top: 26px;
+    margin-bottom: 200px;
+
+    &__bcg-img {
+        position: absolute;
+        top: 132px;
+        right: 0;
+        width: 587px;
+    }
+
+    &__preview {
+        margin-bottom: 110px;
+        &-title {
+            width: 600px;
+            margin-bottom: 30px;
+        }
+        &-description {
+            width: 487px;
+            margin-bottom: 224px;
+        }
+    }
+
+    &__social {
+        &-container {
+            display: flex;
+            padding: 12px;
+            width: fit-content;
+        }
+        &-item {
+            margin-right: 22px;
+            cursor: pointer;
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
+}

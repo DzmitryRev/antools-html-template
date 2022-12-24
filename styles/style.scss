@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+//root
+@import "./vars";
+@import "./container.scss";
+//pages
+@import "./hero.scss";
+@import "./popular.scss";
+//components
+@import "./header.scss";
+@import "./button.scss";
+@import "./texts.scss";
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    cursor: default;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    text-rendering: optimizeLegibility;
+    background: $primary-grey;
+}
+
+button {
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}

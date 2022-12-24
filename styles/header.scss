@@ -1,0 +1,37 @@
+@import "./vars";
+@import "./mixins";
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 104px;
+    &__logo {
+        &-container {
+            display: flex;
+            align-items: center;
+        }
+        &-img {
+            margin-right: 12px;
+        }
+        &-title {
+            @include text(22px, 600, #fff, 0.9);
+        }
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        &-item {
+            @include text(16px, 500, #fff, 0.55);
+            margin-right: 30px;
+            &:last-of-type {
+                margin: 0;
+            }
+        }
+    }
+
+    &__sign-up-button {
+        @include button(16px, 24px, 12px, 28px);
+        margin-left: 41px;
+    }
+}

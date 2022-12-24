@@ -1,0 +1,14 @@
+@import "./vars";
+
+%border {
+    border-radius: 8px;
+}
+
+.button {
+    &__orange {
+        @extend %border;
+        background: $orange;
+        color: #fff;
+        font-weight: 600;
+    }
+}
