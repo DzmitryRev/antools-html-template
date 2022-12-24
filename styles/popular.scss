@@ -7,4 +7,21 @@
         text-align: center;
         margin-bottom: 90px;
     }
+    &__tools {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        justify-content: space-between;
+        grid-row-gap: 100px;
+        margin-bottom: 100px;
+    }
+    &__load-more {
+        &-container {
+            text-align: center;
+        }
+        &-button {
+            @include button(20px, 30px, 17px, 38px, transparent, $orange);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    }
+    margin-bottom: 200px;
 }

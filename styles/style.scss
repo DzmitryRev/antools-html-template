@@ -7,8 +7,8 @@
 @import "./popular.scss";
 //components
 @import "./header.scss";
-@import "./button.scss";
 @import "./texts.scss";
+@import "./tool.scss";
 
 *,
 *::after,
@@ -34,4 +34,9 @@ button {
 a {
     cursor: pointer;
     text-decoration: none;
+}
+
+path {
+    fill: inherit;
+    stroke: inherit;
 }

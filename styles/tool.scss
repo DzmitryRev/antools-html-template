@@ -1,0 +1,107 @@
+@import "./mixins";
+@import "./vars";
+
+%left-container-icon {
+    border-radius: 8px;
+    width: 42px;
+    height: 42px;
+    position: relative;
+    svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        fill: rgba(255, 255, 255, 0.38);
+    }
+    &:hover {
+        background-color: $light-grey;
+
+        svg {
+            fill: $red;
+        }
+    }
+}
+
+.tool {
+    @include tool-bcg(inherit, 33px, 33px);
+    width: 392px;
+    border: 1px solid transparent;
+    height: 294px;
+    transition: transform 0.3s ease-in-out;
+    &__header {
+        margin-bottom: 30px;
+        padding-left: 10px;
+        display: flex;
+        &-icon {
+            margin-right: 30px;
+        }
+        &-title {
+            @include text(24px, 500, #fff, 0.78);
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        &-description {
+            @include text(18px, 500, $golden-dark, 0.55);
+        }
+    }
+    &__description {
+        @include text(16px, 400, #fff, 0.55);
+        height: 60px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: 30px;
+        line-height: 30px;
+    }
+    &__footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &-left-container {
+            display: flex;
+            align-items: center;
+        }
+        &-like-icon {
+            @extend %left-container-icon;
+            svg {
+                width: 28px;
+                height: 28px;
+            }
+            margin-right: 12px;
+        }
+        &-folder-icon {
+            @extend %left-container-icon;
+            svg {
+                width: 30px;
+                height: 30px;
+            }
+        }
+        &-button {
+            @include button(16px, 24px, 9px, 35px, inherit, rgba(255, 255, 255, 0.55));
+        }
+    }
+    &:hover {
+        @include gradient-bcg;
+
+        transform: translateY(-20px);
+
+        .tool {
+            &__header {
+                &-title {
+                    @include text(24px, 500, #fff, 0.9);
+                }
+                &-description {
+                    @include text(18px, 500, $golden-dark, 1);
+                }
+            }
+            &__description {
+                @include text(16px, 400, #fff, 0.78);
+            }
+
+            &__footer {
+                &-button {
+                    @include button(16px, 24px, 9px, 35px, $orange, rgba(255, 255, 255, 1));
+                }
+            }
+        }
+    }
+}

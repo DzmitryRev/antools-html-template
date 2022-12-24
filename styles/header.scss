@@ -31,7 +31,7 @@
     }
 
     &__sign-up-button {
-        @include button(16px, 24px, 12px, 28px);
+        @include button(16px, 24px, 12px, 28px, $orange, #fff);
         margin-left: 41px;
     }
 }

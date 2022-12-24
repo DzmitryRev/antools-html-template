@@ -7,8 +7,22 @@
     opacity: $opa;
 }
 
-@mixin button($fz, $lh ,$pv, $ph) {
+@mixin button($fz, $lh, $pv, $ph, $bcg, $col) {
     font-size: $fz;
     line-height: $lh;
     padding: $pv $ph;
+    border-radius: 8px;
+    background: $bcg;
+    color: $col;
+    font-weight: 600;
+}
+
+@mixin tool-bcg($color, $pv, $ph) {
+    border-radius: 8px;
+    padding: $pv $ph;
+}
+
+@mixin gradient-bcg {
+    background: linear-gradient(17deg, rgba(40, 48, 54, 0.6) 85%, rgba(255, 110, 48, 0.1) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
