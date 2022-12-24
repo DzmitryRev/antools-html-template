@@ -17,12 +17,12 @@
     font-weight: 600;
 }
 
-@mixin tool-bcg($color, $pv, $ph) {
+@mixin tool-bcg($pv, $ph) {
     border-radius: 8px;
     padding: $pv $ph;
 }
 
-@mixin gradient-bcg {
-    background: linear-gradient(17deg, rgba(40, 48, 54, 0.6) 85%, rgba(255, 110, 48, 0.1) 100%);
+@mixin gradient-bcg($gradient) {
+    background: $gradient;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }

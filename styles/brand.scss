@@ -1,0 +1,51 @@
+%brand-icon {
+    svg {
+        transition: fill-opacity 0.2s ease-in-out;
+        width: 200px;
+        height: 50px;
+        fill: #fff;
+        fill-opacity: 0.2;
+        use {
+            top: 100px;
+            position: absolute;
+        }
+    }
+
+    &:hover {
+        svg {
+            fill-opacity: 0.8;
+        }
+    }
+}
+
+.brand {
+    @include gradient-bcg(linear-gradient(17deg, rgba(40, 48, 54, 0.6) 85%, rgba(255, 110, 48, 0.1) 100%));
+    @include tool-bcg(55px, 83px);
+    margin-bottom: 200px;
+    &__title {
+        text-align: center;
+        @include text(24px, 500, #fff, 0.8);
+        margin-bottom: 55px;
+    }
+    &__brands {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__brand-icon {
+        & * {
+            cursor: pointer;
+        }
+        @extend %brand-icon;
+
+        &_google {
+            @extend %brand-icon;
+            svg {
+                width: 160px;
+            }
+            & * {
+                cursor: pointer;
+            }
+        }
+    }
+}

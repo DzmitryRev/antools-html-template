@@ -23,7 +23,7 @@
 }
 
 .tool {
-    @include tool-bcg(inherit, 33px, 33px);
+    @include tool-bcg(33px, 33px);
     width: 392px;
     border: 1px solid transparent;
     height: 294px;
@@ -80,7 +80,7 @@
         }
     }
     &:hover {
-        @include gradient-bcg;
+        @include gradient-bcg(linear-gradient(17deg, rgba(40, 48, 54, 0.6) 85%, rgba(255, 110, 48, 0.1) 100%));
 
         transform: translateY(-20px);
 
