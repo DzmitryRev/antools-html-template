@@ -1,0 +1,46 @@
+.footer {
+    padding-top: 70px;
+    margin-bottom: 100px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    &__container {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__left-block {
+        margin-right: 156px;
+        &-logo {
+            margin-bottom: 25px;
+        }
+        &-subtitle {
+            @include text(16px, 500, $white-09);
+            margin-bottom: 21px;
+        }
+        &-item {
+            @include text(14px, 400, $white-055, 25px);
+            max-width: 260px;
+        }
+    }
+    &__right-block {
+        display: flex;
+        &-col {
+            margin-right: 115px;
+            &:last-of-type {
+                margin-right: 125px;
+            }
+        }
+        &-title {
+            @include text(20px, 500, $white-09);
+            margin-bottom: 20px;
+        }
+        &-item {
+            display: block;
+            @include text(16px, 500, $white-055, 24px);
+            margin-bottom: 10px;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+            cursor: pointer;
+        }
+    }
+}

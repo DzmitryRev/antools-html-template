@@ -7,10 +7,14 @@
 @import "./popular.scss";
 @import "./brand.scss";
 @import "./newcomer.scss";
+@import "./join.scss";
+@import "./footer.scss";
+@import "./slider.scss";
 //components
 @import "./header.scss";
 @import "./texts.scss";
 @import "./tool.scss";
+@import "./input.scss";
 
 *,
 *::after,
@@ -41,4 +45,8 @@ a {
 path {
     fill: inherit;
     stroke: inherit;
+}
+
+input {
+    font-family: inherit;
 }

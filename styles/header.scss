@@ -14,18 +14,23 @@
             margin-right: 12px;
         }
         &-title {
-            @include text(22px, 600, #fff, 0.9);
+            @include text(22px, 600, $white-09);
         }
     }
 
     &__nav {
         display: flex;
         align-items: center;
+        padding-left: 60px;
         &-item {
-            @include text(16px, 500, #fff, 0.55);
-            margin-right: 30px;
+            transition: opacity 0.3s ease-in-out;
+            @include text(16px, 500, $white-055);
+            margin-right: 41px;
             &:last-of-type {
                 margin: 0;
+            }
+            &:hover {
+                @include text(16px, 500, $white-09);
             }
         }
     }

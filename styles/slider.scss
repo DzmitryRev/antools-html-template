@@ -1,0 +1,96 @@
+%indicator {
+    display: block;
+    width: 44px;
+    height: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.slider {
+    margin-bottom: 250px;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 92px;
+    }
+
+    &__arrow-container {
+        width: 80px;
+        align-self: center;
+        & svg {
+            display: block;
+            fill: inherit;
+            width: 16px;
+            height: 28px;
+            margin: 0 auto;
+        }
+    }
+
+    &__indicator {
+        width: fit-content;
+        margin: 0 auto;
+        &-item {
+            position: relative;
+            @extend %indicator;
+            background-color: $orange;
+            &:before {
+                display: block;
+                position: absolute;
+                left: -62px;
+                content: "";
+                @extend %indicator;
+                background-color: $light-grey;
+            }
+            &:after {
+                position: absolute;
+                right: -62px;
+                content: "";
+                @extend %indicator;
+                background-color: $light-grey;
+            }
+        }
+    }
+}
+
+.left {
+    stroke: $white-055;
+}
+.right {
+    stroke: $orange;
+    transform: rotate(180deg);
+}
+
+.slide {
+    display: flex;
+    justify-content: center;
+    &__image-container {
+        max-width: 400px;
+        position: relative;
+    }
+
+    &__name-container {
+        @include tool-bcg(13px, 20px);
+        @include gradient-bcg(linear-gradient(135deg, hsla(206, 15%, 18%, 0.9) 79%, hsla(204, 100%, 40%, 0.2) 100%));
+        position: absolute;
+        bottom: 36px;
+        right: 15px;
+    }
+
+    &__name {
+        @include text(26px, 500, rgba(255, 255, 255, 0.78), 39px);
+        letter-spacing: 1.5%;
+    }
+
+    &__position {
+        @include text(16px, 400, $white-055, 24px);
+    }
+    &__content-container {
+        padding-left: 57px;
+        padding-top: 127px;
+    }
+    &__text {
+        max-width: 393px;
+        @include text(14px, 400, rgba(255, 255, 255, 0.78), 30px);
+        letter-spacing: 1.5%;
+    }
+}

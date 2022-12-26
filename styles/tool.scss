@@ -27,27 +27,32 @@
     transition: transform 0.3s ease-in-out;
     &__header {
         margin-bottom: 30px;
-        padding-left: 10px;
         display: flex;
-        &-icon {
-            margin-right: 30px;
+        &-icon-container {
+            width: 64px;
+            height: 64px;
+            margin-right: 31px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         &-title {
-            @include text(24px, 500, #fff, 0.78);
+            @include text(24px, 500, rgba(255, 255, 255, 0.78), 30px);
+            margin-bottom: 5px;
             white-space: nowrap;
             overflow: hidden;
         }
         &-description {
-            @include text(18px, 500, $golden-dark, 0.55);
+            @include text(18px, 500, $golden-dark);
+            opacity: 0.55;
         }
     }
     &__description {
-        @include text(16px, 400, #fff, 0.55);
+        @include text(16px, 400, $white-055, 30px);
         height: 60px;
         overflow: hidden;
         text-overflow: ellipsis;
         margin-bottom: 30px;
-        line-height: 30px;
     }
     &__footer {
         display: flex;
@@ -77,21 +82,21 @@
         }
     }
     &:hover {
-        @include gradient-bcg(linear-gradient(17deg, rgba(40, 48, 54, 0.6) 85%, rgba(255, 110, 48, 0.1) 100%));
+        @include gradient-bcg(linear-gradient(17deg, rgba(40, 48, 54, 0.3) 85%, rgba(255, 110, 48, 0.1) 100%));
 
         transform: translateY(-20px);
 
         .tool {
             &__header {
                 &-title {
-                    @include text(24px, 500, #fff, 0.9);
+                    @include text(24px, 500, $white-09, 30px);
                 }
                 &-description {
-                    @include text(18px, 500, $golden-dark, 1);
+                    @include text(18px, 500, $golden-dark);
                 }
             }
             &__description {
-                @include text(16px, 400, #fff, 0.78);
+                @include text(16px, 400, $white-09);
             }
 
             &__footer {
@@ -104,7 +109,7 @@
 }
 
 .big {
-    @include tool-bcg(33px, 33px);
+    @include tool-bcg(31px, 31px);
     width: 392px;
     height: 294px;
 }
@@ -117,7 +122,9 @@
     }
     &:hover {
         .tool__description {
-            @include text(14px, 400, #fff, 0.78);
+            // @include text(14px, 400, $white-09, 30px);
+            font-size: 14px;
+            // color: #fff;
         }
     }
 }

@@ -14,12 +14,14 @@
     &__preview {
         margin-bottom: 110px;
         &-title {
+            @include text(50px, 500, $white-09, 70px);
             width: 600px;
             margin-bottom: 30px;
         }
         &-description {
+            @include text(18px, 400, $white-055, 30px);
             width: 487px;
-            margin-bottom: 224px;
+            margin-bottom: 60px;
         }
     }
 
@@ -30,7 +32,7 @@
             width: fit-content;
         }
         &-item {
-            margin-right: 22px;
+            margin-right: 30px;
             cursor: pointer;
             &:last-of-type {
                 margin-right: 0;

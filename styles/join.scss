@@ -1,0 +1,18 @@
+.join {
+    margin-bottom: 238px;
+    text-align: center;
+    &__title {
+        @include text(48px, 500, $white-09, 58px);
+        margin-bottom: 30px;
+    }
+    &__description {
+        max-width: 430px;
+        margin: 0 auto;
+        @include text(18px, 500, $white-055, 30px);
+        margin-bottom: 100px;
+    }
+    &__input {
+        display: flex;
+        justify-content: center;
+    }
+}

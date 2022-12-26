@@ -1,0 +1,16 @@
+.input-container {
+    padding: 8px 11px 8px 22px;
+    background: $light-grey;
+    border-radius: 15px;
+    width: fit-content;
+    &__input {
+        background-color: transparent;
+        border: none;
+        width: 330px;
+        @include text(14px, 400, rgba(255, 255, 255, 0.38), 21px);
+        outline: none;
+    }
+    &__button {
+        @include button(16px, 24px, 12px, 36px, $orange, #fff);
+    }
+}

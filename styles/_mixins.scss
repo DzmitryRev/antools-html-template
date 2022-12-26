@@ -1,10 +1,10 @@
-@mixin text($fz, $fw, $col, $opa: 1) {
+@mixin text($fz, $fw, $col, $lh: auto) {
     font: {
         size: $fz;
         weight: $fw;
     }
+    line-height: $lh;
     color: $col;
-    opacity: $opa;
 }
 
 @mixin button($fz, $lh, $pv, $ph, $bcg, $col) {
@@ -15,6 +15,11 @@
     background: $bcg;
     color: $col;
     font-weight: 600;
+    transition: background-color 0.3s ease-in-out;
+    &:hover {
+        background: $orange-hover;
+        color: #fff;
+    }
 }
 
 @mixin tool-bcg($pv, $ph) {
@@ -24,5 +29,5 @@
 
 @mixin gradient-bcg($gradient) {
     background: $gradient;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid $light-grey;
 }

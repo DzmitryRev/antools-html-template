@@ -20,11 +20,11 @@
 
 .brand {
     @include gradient-bcg(linear-gradient(17deg, rgba(40, 48, 54, 0.6) 85%, rgba(255, 110, 48, 0.1) 100%));
-    @include tool-bcg(55px, 83px);
+    @include tool-bcg(52px, 83px);
     margin-bottom: 200px;
     &__title {
         text-align: center;
-        @include text(24px, 500, #fff, 0.8);
+        @include text(24px, 500, rgba(255, 255, 255, 0.8));
         margin-bottom: 55px;
     }
     &__brands {

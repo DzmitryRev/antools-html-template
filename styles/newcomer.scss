@@ -6,18 +6,19 @@
         margin-top: 20px;
     }
     &__title {
-        @include text(48px, 500, #fff, 0.9);
+        @include text(48px, 500, $white-09, 56px);
         margin-bottom: 30px;
     }
     &__description {
-        @include text(18px, 500, #fff, 0.55);
+        @include text(18px, 500, $white-055, 32px);
         margin-bottom: 60px;
-        max-width: 440px;
+        max-width: 430px;
     }
     &__button {
         @include button(18px, 27px, 16px, 40px, $orange, rgba(255, 255, 255, 1));
     }
     &__brands {
+        padding-top: 20px;
         display: grid;
         grid-template-columns: repeat(2, 288px);
         grid-row-gap: 50px;
